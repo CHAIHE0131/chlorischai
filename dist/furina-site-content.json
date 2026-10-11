@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "aboutTitle": "柴荷 / He Chai",
+  "aboutBody": "清华大学美术学院视觉传达设计本科生，GPA 3.93/4.0，专业排名第 2。\n\n我是一名产品经理、游戏策划和视觉设计师，关注 AI 创作、游戏体验与复杂系统如何被讲清楚、做出来。\n\n目前在腾讯 IEG 游戏事业群实习，负责造化工坊的创作入口、提示词策略、灵感推荐、技能收藏与创作等待态体验。",
+  "articlesLead": "实习与项目经历",
+  "articles": [
+    {"title":"腾讯 IEG · 造化工坊 AI 产品策划 · 2026.07—至今","description":"参与创作入口与创作者体验，负责提示词 AI 优化、灵感推荐、技能收藏、等待态和游戏库搜索体验。","url":"https://zaohua.qq.com/home"},
+    {"title":"百度文库 · AI 产品经理 · 2026.03—2026.07","description":"参与 AI 课件评测 Skill、文库 APP 个人页改版，以及 AI 内容生成与质量优化。","url":"assets/baidu-ai.pdf"},
+    {"title":"泡漫 AI 短剧 · 产品经理 · 2025.11—2026.03","description":"跟进专业创作模式、成片编辑、用户反馈和会员订阅落地，输出 PRD 与可交互原型。","url":"https://www.popreels.cn/"},
+    {"title":"快手 · AIGC 视觉实习 · 2024.12—2025.04","description":"将品牌 IP 拆解为可复用 Prompt，服务理想家、快聘等业务，AIGC 工作流让海报出图效率提升约 7 倍。","url":""},
+    {"title":"Algaetopia · 黑客松项目负责人","description":"负责未来虚拟城市建造管理游戏的世界观、玩家链路、系统信息架构与高保真交互原型。获 MUSE 设计奖银奖、伦敦设计奖银奖等 8 项奖项。","url":"https://furinayu.github.io/algaetopia/"},
+    {"title":"Scriben AI · 联合创始人 / Founding Designer","description":"从 0 到 1 参与 AI 智能录音笔的需求调研、功能定义、品牌定位、UI/UX 设计和海外营销素材。","url":"https://scriben.ai/?srsltid=AU7gw4WDgRvXKyzAVX81vrZXDaDcuBNJUv5UpLnyQdAloDu6SZhixYDu"}
+  ],
+  "videosPdfUrl": "assets/ai-product-portfolio.pdf",
+  "videosPdfLabel": "柴荷 · AI 产品经理作品集",
+  "videos": [
+    {"title":"腾讯造化工坊 · 创作入口","url":"https://zaohua.qq.com/home","description":"AI 创作平台 / 创作入口与灵感功能","thumbnail":"assets/zaohua-general-thumb.png"},
+    {"title":"百度文库 · AI 内容生成与质量优化","url":"assets/baidu-ai.pdf","description":"AI 内容生成、评测与产品体验优化","thumbnail":"assets/baidu-ai-thumb.png"},
+    {"title":"泡漫 AI 短剧","url":"https://www.popreels.cn/","description":"AI 短剧创作与成片编辑产品体验","thumbnail":"assets/project-image-1.png"},
+    {"title":"Algaetopia · 藻托邦游戏 AI 视频","url":"assets/algaetopia-ai.mp4","description":"游戏策划 / 产品交互 / AI 概念影片","thumbnail":"assets/algeatopia-01.png","portfolioUrl":"assets/algaetopia-portfolio.pdf","trialUrl":"https://furinayu.github.io/algaetopia/"},
+    {"title":"Scriben AI · AI 智能录音笔","url":"https://scriben.ai/product#shop","description":"联合创始人 / Founding Designer / 品牌与产品设计","thumbnail":"assets/project-image-2.png"},
+    {"title":"腾讯造化工坊 · AI 产品案例","url":"assets/zaohua-case.pdf","description":"AI 产品案例与交互策略复盘","thumbnail":"assets/zaohua-case-thumb.png"}
+  ],
+  "images": [
+    {"url":"assets/algeatopia-01.png","caption":"Algaetopia · English layout","link":"assets/algaetopia-english-web.pdf"},
+    {"url":"assets/zaohua-general-thumb.png","caption":"造化工坊 · 通用输入框","link":"assets/zaohua-case.pdf"},
+    {"url":"assets/algeatopia-03.png","caption":"Algaetopia · Spatial Morphology"},
+    {"url":"assets/algeatopia-04.png","caption":"Algaetopia · Gameplay Mechanics"},
+    {"url":"assets/project-image-1.png","caption":"AI 创作平台 · 产品体验"},
+    {"url":"assets/project-image-2.png","caption":"Scriben AI · Brand & Product","link":"https://scriben.ai/product#shop"}
+  ],
+  "apps": [
+    {"title":"简历 Resume","description":"清华大学视觉传达设计 · 产品经理 / 游戏策划","url":"assets/resume.pdf"},
+    {"title":"设计作品集","description":"视觉设计、品牌与交互作品","url":"assets/design-portfolio.pdf"},
+    {"title":"AI 产品案例","description":"AI 产品经理作品集","url":"assets/ai-product-portfolio.pdf"},
+    {"title":"联系邮箱","description":"2832384493@qq.com","url":"mailto:2832384493@qq.com"}
+  ]
+}
