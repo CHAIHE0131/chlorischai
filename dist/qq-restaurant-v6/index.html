@@ -115,7 +115,7 @@ img{max-width:none;display:block;-webkit-user-drag:none}
 #openChip{position:absolute;left:10px;bottom:calc(var(--navh) + 14px);z-index:9;padding:5px 10px 5px 8px;border-radius:14px;background:rgba(255,246,226,.94);border:2px solid #6fae3e;color:#2f7a1e;font-size:11px;font-weight:900;box-shadow:0 2px 0 rgba(47,122,30,.35);display:flex;align-items:center;gap:6px}
 #openChip i{width:8px;height:8px;border-radius:50%;background:#62c33b;box-shadow:0 0 0 3px rgba(98,195,59,.25);animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.4}}
-#peakLauncher{position:absolute;right:10px;bottom:calc(var(--navh) + 8px);z-index:9;display:flex;align-items:center;gap:8px;padding:6px 16px 6px 6px;border-radius:30px;border:3px solid #b4480f;background:linear-gradient(#ffc04a,#f2711f);box-shadow:0 4px 0 #8a3209,0 8px 14px rgba(0,0,0,.3);color:#fff}
+#peakLauncher{position:absolute;right:10px;bottom:calc(var(--navh) + 8px);touch-action:manipulation;pointer-events:auto;user-select:none;-webkit-tap-highlight-color:transparent;z-index:9;display:flex;align-items:center;gap:8px;padding:6px 16px 6px 6px;border-radius:30px;border:3px solid #b4480f;background:linear-gradient(#ffc04a,#f2711f);box-shadow:0 4px 0 #8a3209,0 8px 14px rgba(0,0,0,.3);color:#fff}
 #peakLauncher img{width:44px;height:44px;border-radius:50%;background:#fff3dc;border:2px solid #b4480f}
 #peakLauncher b{display:block;font-family:var(--display);font-size:20px;line-height:22px;text-shadow:0 2px 0 #a8410c}
 #peakLauncher small{display:block;font-size:10px;font-weight:900;opacity:.95}
@@ -561,7 +561,7 @@ img{max-width:none;display:block;-webkit-user-drag:none}
 .fixed{cursor:default}
 #ftool{position:absolute;z-index:1000;display:flex;gap:6px;padding:5px;border-radius:14px;background:#fff8e8;border:2px solid #d9b98a;box-shadow:0 4px 8px rgba(0,0,0,.25);transform:translate(-50%,-100%)}
 #ftool::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-7px;border:7px solid transparent;border-top-color:#d9b98a;border-bottom:0}
-#ftool button{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:20px;border:2px solid}
+#ftool button{width:46px;height:46px;min-width:46px;min-height:46px;border-radius:10px;display:grid;place-items:center;font-size:22px;border:2px solid;touch-action:manipulation;pointer-events:auto;user-select:none;-webkit-tap-highlight-color:transparent}
 #ftool .rot{background:#dcefff;border-color:#7fb3e6;color:#2a6fb4}
 #ftool .del{background:#ffe1dc;border-color:#f09282;color:#c3321f}
 .dtop{position:absolute;left:10px;right:10px;top:10px;display:flex;align-items:center;gap:8px;z-index:5}
@@ -784,7 +784,7 @@ def('lb_cab2',{name:'木纹矮柜',cat:'deco',kind:'deco',spr:{img:'L_cab2',base
 [['lb_lan1','六角宫灯',60,3,1],['lb_lan2','竹骨宫灯',60,3,1],['lb_lan3','圆纱灯',50,2,2],['lb_lan4','小壁灯',40,2,2]].forEach(([k,n,p,c,lv],i)=>def(k,{name:n,cat:'wall',kind:'wall',wall:1,spr:{img:'L_'+k.slice(3)},wbase:'L',ww:[30,30,26,22][i],price:p,com:c,lv,lim:6}));
 [['lb_paint1','水墨·孤舟',60,3,1],['lb_paint2','水墨·远山',80,3,2],['lb_paint3','水墨·竹林',70,3,1]].forEach(([k,n,p,c,lv],i)=>def(k,{name:n,cat:'wall',kind:'wall',wall:1,spr:{img:'L_'+k.slice(3)},skew:1,ww:i===1?52:38,price:p,com:c,lv,lim:3}));
 // —— 大门 ——
-def('lb_door_pwx',{name:'品味轩正门',cat:'door',kind:'door',wall:1,door:1,sides:['L'],spr:{img:'L_door_pwx'},wbase:'L',ww:112,price:300,com:7,lv:1,lim:1});
+def('lb_door_pwx',{name:'格心单扇门',cat:'door',kind:'door',wall:1,door:1,sides:['L'],spr:{img:'L_door4'},wbase:'L',ww:112,price:300,com:7,lv:1,lim:1});
 [['door3','铜环对开门',160,4,1],['door4','格心单扇门',120,3,1],['door_arch','木牌坊门洞',200,5,2],['door5','如意铜钉门',180,4,2],['door6','素面木门',80,2,1],['door7','半格推拉门',140,3,2],['door8','卍字格扇门',220,5,3],['door9','回纹格扇门',220,5,3],['door10','四扇格门',320,7,4]].forEach(([k,n,p,c,lv])=>def('lb_'+k,{name:n,cat:'door',kind:'door',wall:1,door:1,skew:1,spr:{img:'L_'+k},ww:k==='door10'||k==='door7'||k==='door_arch'?66:50,price:p,com:c,lv,lim:1}));
 // —— 墙纸 / 地板 / 外景（风格类，一键替换） ——
 def('wpA',{name:'米黄木柱墙',cat:'wp',kind:'wp',style:'wall',proc:1,price:40,com:2,lv:1,lim:1});
@@ -1883,7 +1883,7 @@ function drawRoom(){if(!decorOpen)return;const v=validate();const d=dims(),nx=EX
 function placeTool(){const ov=$('#dov');if(!ov)return;const sf=S.furn.find(f=>f.u===dSel),sw=S.wall.find(w=>w.u===dSel);if(!(sf||sw)||dDrag){ov.innerHTML='';return}
  let x,y;if(sf){const c=centerOf(sf);[x,y]=toScreen(VD,PJ(...c));const sp=sprite(FURN[sf.t],sf.f);y+=(sp?sp.dy:-60)*VD.cam.z-8}else{const R=wallItemRect(sw);if(!R){ov.innerHTML='';return}[x,y]=toScreen(VD,[R.x,(FURN[sw.t].door?R.y-R.hh:R.cy-R.hh/2)]);y-=8}
  const F=FURN[(sf||sw).t];const busy=sf&&orders.some(o=>{const s=seatInfo(o);return s&&(s.chair.u===sf.u||s.table.u===sf.u)});
- ov.innerHTML=`<div id="ftool" style="left:${clamp(x,70,W-70)}px;top:${Math.max(118,y)}px"><span class="nm">${F.name}${sf?` · ${F.size.join('×')}`:''}${busy?' · 用餐中':''}</span>${sf&&F.rot&&!F.flat?'<button class="rot" data-act="fRot" aria-label="旋转">⟳</button>':''}${sw&&F.door?'':'<button class="del" data-act="fDel" aria-label="收纳">⇩</button>'}</div>`}
+ const uidSel=(sf||sw)?.u||''; ov.innerHTML=`<div id="ftool" style="left:${clamp(x,70,W-70)}px;top:${Math.max(118,y)}px"><span class="nm">${F.name}${sf?` · ${F.size.join('×')}`:''}${busy?' · 用餐中':''}</span>${sf&&F.rot&&!F.flat?`<button type="button" class="rot" data-act="fRot" data-u="${uidSel}" aria-label="旋转">⟳</button>`:''}<button type="button" class="del" data-act="fDel" data-u="${uidSel}" aria-label="收纳">⇩</button></div>`}
 function trayHTML(){
  const cat=SHOP_CATS.find(c=>c[0]===dTab)||SHOP_CATS[0];
  const bgMode=dTab==='fl'&&dFloorT==='B';
@@ -1920,9 +1920,9 @@ function fAdd(t){const F=FURN[t];if(S.lv<F.lv){toast(`餐厅 Lv.${F.lv} 解锁�
   if(!item){toast(F.zone==='k'?'厨房没有空位了，先收纳一些或去扩建':'没有空位了，先收纳一些家具或去扩建');return}}
  if(placed(t)>=(S.own[t]||0)){if(!spend(F.price))return;S.own[t]=(S.own[t]||0)+1}
  (F.wall?S.wall:S.furn).push(item);dSel=item.u;snd('pop');drawRoom()}
-function fRot(){const p=S.furn.find(f=>f.u===dSel);if(!p)return;const F=FURN[p.t];if(!F.rot||F.flat){toast('圆桌没有方向，不需要旋转');return}
+function fRot(u){const target=u||dSel;const p=S.furn.find(f=>f.u===target);if(!p)return;const F=FURN[p.t];if(!F.rot||F.flat){toast('圆桌没有方向，不需要旋转');return}
  const nf=(p.f+1)%4;const cand=S.furn.map(f=>f===p?{...p,f:nf}:f);const res=tryLayout(cand,p.u);if(!res.ok){toast(res.why+'，保持原方向');snd('bad');return}p.f=nf;snd('tap');drawRoom()}
-function fDel(){let i=S.furn.findIndex(f=>f.u===dSel);if(i>=0){const t=S.furn[i].t;const cand=S.furn.filter((_,j)=>j!==i);const res=tryLayout(cand,null);if(!res.ok){toast(res.why);snd('bad');return}toast(`${FURN[t].name} 已收进仓库`);S.furn.splice(i,1)}else{i=S.wall.findIndex(w=>w.u===dSel);if(i>=0){toast(`${FURN[S.wall[i].t].name} 已收进仓库`);S.wall.splice(i,1)}}dSel=null;drawRoom()}
+function fDel(u){const target=u||dSel;let i=S.furn.findIndex(f=>f.u===target);if(i>=0){const t=S.furn[i].t;const cand=S.furn.filter((_,j)=>j!==i);const res=tryLayout(cand,null);if(!res.ok){toast(res.why);snd('bad');return}toast(`${FURN[t].name} 已收进仓库`);S.furn.splice(i,1)}else{i=S.wall.findIndex(w=>w.u===target);if(i>=0){toast(`${FURN[S.wall[i].t].name} 已收进仓库`);S.wall.splice(i,1)}}dSel=null;drawRoom()}
 /* 装修手势：按住家具拖动吸附到格子；空白拖动平移；双指/滚轮缩放 */
 function hitProp(v,p){const w=toWorld(v,p);for(let i=v.list.length-1;i>=0;i--){const b=v.list[i];const u=(w[0]-b.x)/b.w,t=(w[1]-b.y)/b.h;if(u<0||u>=1||t<0||t>=1)continue;const m=META[b.key];if(m&&m.mask){const uu=b.flip?1-u:u;const x=Math.floor(uu*m.mw),y=Math.floor(t*m.mh);if(m.mask[y*m.mw+x]>40)return b.p}else return b.p}
  const c=UNPJ(...w).map(Math.round);return S.furn.find(f=>cellsOf(f).some(x=>same(x,c)))||null}
@@ -2056,6 +2056,11 @@ const LOGO=`<svg viewBox="0 0 330 250" aria-label="QQ餐厅 重逢">
 
 /* ================= events ================= */
 let confirmFn=null;
+let lastToolAction=0;
+function toolAction(act,u){const now=performance.now();if(now-lastToolAction<380)return;lastToolAction=now;if(act==='fRot')fRot(u);else if(act==='fDel')fDel(u)}
+let lastPeakTap=0;
+function startPeakFromInput(e){if(e){e.preventDefault();e.stopPropagation()}const now=performance.now();if(now-lastPeakTap<450)return;lastPeakTap=now;startPeak()}
+document.addEventListener('pointerup',e=>{const tool=e.target.closest('#ftool button[data-act]');if(tool){toolAction(tool.dataset.act,tool.dataset.u);return}const peakBtn=e.target.closest('#peakLauncher');if(peakBtn)startPeakFromInput(e)},{capture:true});
 document.addEventListener('click',e=>{
  const nb=e.target.closest('#nav .nb');if(nb){const w=nb.dataset.win;if(curWin===w)closeWin();else openWin(w);return}
  const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,ds=b.dataset;
@@ -2072,7 +2077,7 @@ document.addEventListener('click',e=>{
   frPhrase:()=>{frPhrase=+ds.i;renderWin()},makeCard,frRefresh:()=>{toast('好友列表已刷新');S.facts={...S.facts};renderWin()},
   fAct:()=>fAct(ds.f,ds.k),regift:()=>regift(ds.f),claimVisit:()=>{claimVisit(ds.f);renderWin()},visitShop:()=>{showPop('shop',{f:ds.f})},
   shopLike:()=>{if(!S.facts[ds.f+'like']){S.facts[ds.f+'like']=1;S.coins+=10;S.heart++;toast('点赞成功 +10 金币 ❤+1');snd('coin');renderPop();renderHud();save()}},
-  startPeak,serve:()=>boost(null),boost:()=>{if(peak||S.guide.done)boost(ds.id)},evt:()=>eventChoice(ds.c),
+  startPeak:startPeakFromInput,serve:()=>boost(null),boost:()=>{if(peak||S.guide.done)boost(ds.id)},evt:()=>eventChoice(ds.c),
   claim:doClaim,later:()=>{if(S.claim&&S.claim.first){doClaim();return}closePop();toast('收益收在右上角「收获」里')},
   lvOk:()=>{const lv=popData.lv;const rw=lv*30;const r=rel($('#pop'));flyCoins(r.x+r.w/2,r.y+r.h*.7,5);S.coins+=rw;save();closePop()},
   lvGo:()=>{const lv=popData.lv;S.coins+=lv*30;save();const w=ds.w;navLock=true;closePop();if(w==='menu')menuTab='learn';setTimeout(()=>{navLock=false;if(w==='expand'){openDecor();showPop('expand')}else{openWin(w);if(!popKind&&lvQueue.length&&!peak)flushLevel()}},300)},
@@ -2097,7 +2102,7 @@ document.addEventListener('click',e=>{
   coinInfo:()=>showPop('info',{title:'金币',text:'服务顾客、主动高峰、回店收益和好友小费都会带来金币。'}),
   cashInfo:()=>showPop('info',{title:'点券',text:'点券用于限定装饰和活动，Demo 中暂不消耗。'}),
   dBack:()=>{if(dirty()){confirmFn=()=>closeDecor(false);showPop('confirm',{title:'放弃修改？',text:'这次摆放还没保存，返回后主页会保持原布局，买的家具也会退款。',yes:'放弃修改',no:'继续装修'})}else closeDecor(false)},
-  dSave:()=>closeDecor(true),dGrid:()=>{dGrid=!dGrid;drawRoom()},dTab:()=>{dTab=ds.t;snd('tap');drawRoom()},fAdd:()=>fAdd(ds.t),fRot,fDel,
+  dSave:()=>closeDecor(true),dGrid:()=>{dGrid=!dGrid;drawRoom()},dTab:()=>{dTab=ds.t;snd('tap');drawRoom()},fAdd:()=>fAdd(ds.t),fRot:()=>toolAction('fRot',ds.u),fDel:()=>toolAction('fDel',ds.u),
   gNext:()=>{setStep(1)},gSkip:()=>{confirmFn=skipGuide;showPop('confirm',{title:'跳过引导？',text:'跳过后可以在「设置」里重新体验。',yes:'跳过',no:'继续引导'})},gEnd:()=>finishGuide(false),
  };
  if(H[a]){H[a]();}
